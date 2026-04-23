@@ -9,7 +9,7 @@
             --bg-color: #fdfcf8;
             --container-bg: rgba(255, 255, 255, 0.4);
             --text-main: #2d4a4a;
-            --accent: #3d7a7a;
+            --accent: #4fd1c5; /* Alignement sur le turquoise */
         }
 
         @media (prefers-color-scheme: dark) {
@@ -17,7 +17,7 @@
                 --bg-color: #1a2421;
                 --container-bg: rgba(0, 0, 0, 0.3);
                 --text-main: #e0ece4;
-                --accent: #a0f1f1;
+                --accent: #4fd1c5;
             }
         }
 
@@ -26,18 +26,17 @@
             padding: 0;
             font-family: 'Segoe UI', Roboto, sans-serif;
             background-color: var(--bg-color);
-            background-image: radial-gradient(circle at 50% 50%, rgba(61, 122, 122, 0.1) 0%, transparent 80%);
+            background-image: radial-gradient(circle at 50% 50%, rgba(79, 209, 197, 0.1) 0%, transparent 80%);
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             color: var(--text-main);
-            transition: all 0.5s ease;
         }
 
         .container {
             background: var(--container-bg);
-            padding: 3rem 2rem;
+            padding: 2.5rem 2rem;
             border-radius: 40px;
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
@@ -55,7 +54,7 @@
         }
 
         .tictac {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: bold;
             letter-spacing: 4px;
             color: var(--accent);
@@ -71,16 +70,15 @@
         }
 
         h1 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            margin-bottom: 1.2rem;
             font-weight: 600;
         }
 
         p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 1rem;
-            opacity: 0.9;
+            font-size: 1.05rem;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
         }
 
         .highlight {
@@ -88,65 +86,67 @@
             color: var(--accent);
         }
 
+        /* Style du bouton */
+        .btn-container {
+            margin: 2rem 0;
+        }
+
+        .btn-balade {
+            background-color: #4fd1c5;
+            color: #1a202c;
+            padding: 14px 28px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 12px;
+            display: inline-block;
+            transition: transform 0.2s, background-color 0.2s;
+            box-shadow: 0 4px 15px rgba(79, 209, 197, 0.3);
+        }
+
+        .btn-balade:hover {
+            transform: scale(1.05);
+            background-color: #38b2ac;
+        }
+
+        .spam-text {
+            color: var(--text-main);
+            font-size: 0.8rem;
+            margin-top: 10px;
+            display: block;
+            opacity: 0.6;
+        }
+
         .footer {
-            margin-top: 2rem;
+            margin-top: 1.5rem;
             font-size: 0.85rem;
             font-style: italic;
-            opacity: 0.7;
+            opacity: 0.6;
         }
     </style>
-    <body>
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="ce782c8b-e24e-4b95-b302-8ef76986f286"></script>
+</head>
+<body>
     <div class="container">
         <img src="logo.png" alt="Balad'Evasion" class="logo">
         
-        <div class="tictac">Tic Tac... Tic Tac...</div>
+        <div class="tictac">Tic Tac...</div>
         
         <h1>Quelque chose se prépare !</h1>
         
         <p>
-            <strong>Balad'Evasion</strong> est actuellement en cours de finalisation.<br><br>
-            Le futur réseau pour créer vos <span class="highlight">groupes</span>, organiser vos sorties et partager vos plus beaux parcours (<span class="highlight">Moto, Vélo, Rando</span>) arrive très bientôt en France et au-delà.
+            Seul on est bien, à plusieurs c'est mieux. <br>
+            Le réseau pour organiser vos sorties <span class="highlight">Moto, Vélo, Rando</span> arrive en juin.
         </p>
+
+        <div class="btn-container">
+            <a href="https://forms.gle/CoDeq6YtZCmC72MK7" class="btn-balade">
+                🚀 Rejoindre l'aventure
+            </a>
+            <span class="spam-text">Juste une alerte pour l'ouverture. 📩</span>
+        </div>
 
         <div class="footer">Évasion & Nature — Bientôt disponible</div>
     </div>
 </body>
 </html>
-<style>
-  .btn-container {
-    text-align: center;
-    margin: 40px 0;
-  }
-  .btn-balade {
-    background-color: #4fd1c5; /* Le turquoise de ton logo */
-    color: #1a202c; /* Noir/Gris foncé pour le texte */
-    padding: 16px 32px;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px;
-    display: inline-block;
-    transition: transform 0.2s, background-color 0.2s;
-    box-shadow: 0 4px 15px rgba(79, 209, 197, 0.3);
-  }
-  .btn-balade:hover {
-    transform: scale(1.05);
-    background-color: #38b2ac;
-  }
-  .spam-text {
-    color: #a0aec0;
-    font-size: 12px;
-    margin-top: 10px;
-    display: block;
-  }
-</style>
-
-<div class="btn-container">
-  <a href="https://forms.gle/CoDeq6YtZCmC72MK7" class="btn-balade">
-    🚀 Rejoindre l'aventure
-  </a>
-  <span class="spam-text">Pas de spam. Juste une alerte pour l'ouverture en juin. 📩</span>
-</div>
-
-<script defer src="https://cloud.umami.is/script.js" data-website-id="ce782c8b-e24e-4b95-b302-8ef76986f286"></script>
-</head>
